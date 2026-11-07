@@ -1,0 +1,10 @@
+{
+  "9f05e81ad9246fdb": { "user": "reservoir_user", "password": "reservoir_password" },
+  "400398cce715b900": { "user": "reservoir_user", "password": "reservoir_password" },
+  "09631fd98fd6950a": { "user": "reservoir_user", "password": "reservoir_password" },
+  "c20e68d54afc0cd3": { "user": "reservoir_user", "password": "reservoir_password" },
+  "30ee08922fcb0fea": { "user": "reservoir_user", "password": "reservoir_password" },
+  "d2efbbddd130c4fd": { "token": "reservoir-super-secret-token-123" },
+  "c4b02c47f5ca78e8": { "token": "reservoir-super-secret-token-123" },
+  "cd4615cbee732110": { "token": "reservoir-super-secret-token-123" }
+}

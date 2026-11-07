@@ -1,0 +1,1982 @@
+[
+    {
+        "id": "b35860787f2ba7f0",
+        "type": "tab",
+        "label": "Réservoir Intelligent",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "baccecc22459fcdc",
+        "type": "mqtt-broker",
+        "name": "mosquitto",
+        "broker": "mosquitto",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "cd6d7e60bf89b940",
+        "type": "mqtt-broker",
+        "name": "HiveMQ Public ",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "broker_hivemq",
+        "type": "mqtt-broker",
+        "name": "HiveMQ Public",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true
+    },
+    {
+        "id": "ui_tab_reservoir",
+        "type": "ui_tab",
+        "name": "Réservoir",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "ui_group_reservoir",
+        "type": "ui_group",
+        "name": "Contrôle Réservoir",
+        "tab": "ui_tab_reservoir",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "aef3653b42b9a430",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d2efbbddd130c4fd",
+        "type": "influxdb",
+        "hostname": "http://influxdb:8086",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://influxdb:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "7d07b5381c70fc2a",
+        "type": "ui_group",
+        "name": "État du réservoir",
+        "tab": "ui_tab_reservoir",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0a426a780f7ba67b",
+        "type": "ui_group",
+        "name": "Pompe et actionneurs",
+        "tab": "ui_tab_reservoir",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e2b3372a6f8af999",
+        "type": "ui_group",
+        "name": "Alarmes et système",
+        "tab": "ui_tab_reservoir",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c4b02c47f5ca78e8",
+        "type": "influxdb",
+        "hostname": "http://influxdb:8086",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "InfluxDB Réservoir",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://influxdb:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "05f5978b79443f11",
+        "type": "ui_group",
+        "name": "État du réservoir",
+        "tab": "ui_tab_reservoir",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0101d1ce9fbc7ad7",
+        "type": "ui_group",
+        "name": "Pompe et actionneurs",
+        "tab": "ui_tab_reservoir",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4993c9f677ecdbaa",
+        "type": "ui_group",
+        "name": "Alarmes et système",
+        "tab": "ui_tab_reservoir",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aaf16088e9e8bcc3",
+        "type": "ui_group",
+        "name": "Commandes",
+        "tab": "ui_tab_reservoir",
+        "order": 4,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3a2470cac4cd5b4b",
+        "type": "ui_group",
+        "name": "Historique",
+        "tab": "ui_tab_reservoir",
+        "order": 5,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9f05e81ad9246fdb",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "postgres",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "reservoir_db",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "userFieldType": "cred",
+        "userEnv": "",
+        "passwordFieldType": "cred",
+        "passwordEnv": ""
+    },
+    {
+        "id": "400398cce715b900",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "postgres",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "reservoir_db",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "userFieldType": "cred",
+        "userEnv": "",
+        "passwordFieldType": "cred",
+        "passwordEnv": ""
+    },
+    {
+        "id": "09631fd98fd6950a",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "postgres",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "reservoir_db",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "userFieldType": "cred",
+        "userEnv": "",
+        "passwordFieldType": "cred",
+        "passwordEnv": ""
+    },
+    {
+        "id": "c20e68d54afc0cd3",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "postgres",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "reservoir_db",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "userFieldType": "cred",
+        "userEnv": "",
+        "passwordFieldType": "cred",
+        "passwordEnv": ""
+    },
+    {
+        "id": "ebc55b42e8cf7f91",
+        "type": "ui_tab",
+        "name": "Réservoir Intelligent",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "29b470338323e64d",
+        "type": "ui_group",
+        "name": "Vue générale",
+        "tab": "e468a0a8f87a490c",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8299ca56d955d084",
+        "type": "ui_group",
+        "name": "Commandes",
+        "tab": "e468a0a8f87a490c",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b8ca98eb27c0dd9b",
+        "type": "ui_group",
+        "name": "Historique",
+        "tab": "e468a0a8f87a490c",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "27150fb670bd34d6",
+        "type": "mqtt-broker",
+        "name": "HiveMQ Public",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true
+    },
+    {
+        "id": "30ee08922fcb0fea",
+        "type": "postgreSQLConfig",
+        "name": "PostgreSQL Reservoir",
+        "host": "postgres",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "reservoir_db",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "userFieldType": "cred",
+        "userEnv": "",
+        "passwordFieldType": "cred",
+        "passwordEnv": ""
+    },
+    {
+        "id": "cd4615cbee732110",
+        "type": "influxdb",
+        "hostname": "http://influxdb:8086",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "InfluxDB Réservoir",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://influxdb:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "5969373492b80561",
+        "type": "ui_tab",
+        "name": "Réservoir Intelligent",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "74a5cb07defb2bf6",
+        "type": "ui_group",
+        "name": "Vue générale",
+        "tab": "ebc55b42e8cf7f91",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2699f6761b80edcd",
+        "type": "ui_group",
+        "name": "Commandes pompe & débit",
+        "tab": "ebc55b42e8cf7f91",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "691ed2b7e1925874",
+        "type": "ui_group",
+        "name": "Historique",
+        "tab": "ebc55b42e8cf7f91",
+        "order": 4,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e2910e34987a36d3",
+        "type": "ui_group",
+        "name": "Vue générale",
+        "tab": "5969373492b80561",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "832c282730dcac3b",
+        "type": "ui_group",
+        "name": "Commandes",
+        "tab": "5969373492b80561",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1182c1faa2155e3c",
+        "type": "ui_group",
+        "name": "Historique",
+        "tab": "5969373492b80561",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d3030b1e53b8f96f",
+        "type": "ui_group",
+        "name": "Commandes",
+        "tab": "ui_tab_reservoir",
+        "order": 4,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "637dd485c9c6e3be",
+        "type": "ui_group",
+        "name": "Historique temps réel",
+        "tab": "ui_tab_reservoir",
+        "order": 5,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7894ed5221a88d0c",
+        "type": "ui_group",
+        "name": "Sécurité & acquittements",
+        "tab": "ebc55b42e8cf7f91",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "hist_grp_charts",
+        "type": "ui_group",
+        "name": "Historique PostgreSQL | Graphiques",
+        "tab": "5969373492b80561",
+        "order": 6,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "hist_grp_tables",
+        "type": "ui_group",
+        "name": "Historique PostgreSQL | Donnees enregistrees",
+        "tab": "5969373492b80561",
+        "order": 7,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8b7f91412b024a83",
+        "type": "websocket-listener",
+        "path": "/ws/reservoir",
+        "wholemsg": "false"
+    },
+    {
+        "id": "5a1c9e0b7d3f2a41",
+        "type": "ui_group",
+        "name": "Seuils LED (niveau)",
+        "tab": "5969373492b80561",
+        "order": 4,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5c52b24473607260",
+        "type": "ui_tab",
+        "name": "Réservoir Intelligent",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "966d5ae170a4c154",
+        "type": "ui_group",
+        "name": "Commandes",
+        "tab": "5c52b24473607260",
+        "order": 1,
+        "disp": true,
+        "width": "3",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "32760edea4370133",
+        "type": "mqtt in",
+        "z": "b35860787f2ba7f0",
+        "name": "MQTT | TELEMETRY",
+        "topic": "iotcloud/2026/groupe_chafi/projet/device01/telemetry",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "broker_hivemq",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "ef0fd85457701e40"
+            ]
+        ]
+    },
+    {
+        "id": "ef0fd85457701e40",
+        "type": "function",
+        "z": "b35860787f2ba7f0",
+        "name": "Parser TELEMETRY",
+        "func": "let data;\ntry {\n    data = typeof msg.payload === \"string\" ? JSON.parse(msg.payload) : msg.payload;\n} catch(e) {\n    node.error(\"TELEMETRY JSON invalide\", msg);\n    return null;\n}\n\nconst m = data.measurements || {};\nconst a = data.actuators || {};\n\nmsg.payload = data;\nmsg.dashboardType = \"telemetry\";\nmsg.dashboardData = {\n    deviceId: data.deviceId || \"esp32-01\",\n    timestamp: data.timestamp || \"\",\n    niveau: Number(m.niveau ?? 0),\n    distance: Number(m.distance ?? 0),\n    hauteur: Number(m.hauteur ?? 0),\n    volume: Number(m.volumeEauActuelle ?? 0),\n    temps: Number(m.tempsRemplissageEstime ?? 0),\n    pompe: Boolean(a.pompe),\n    relais: Boolean(a.relay),\n    puissance: Number(a.puissancePompe ?? 0),\n    debit: Number(a.debit ?? 0),\n    servo: Number(a.angleServo ?? 0),\n    vanne: Number(a.vanneOuverture ?? 0)\n};\n\nmsg.params = [\n    data.deviceId || null,\n    m.niveau ?? null,\n    m.distance ?? null,\n    m.hauteur ?? null,\n    m.volumeEauActuelle ?? null,\n    m.tempsRemplissageEstime ?? null,\n    a.puissancePompe ?? null,\n    a.debit ?? null,\n    a.angleServo ?? null,\n    a.vanneOuverture ?? null,\n    data.timestamp || null\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 100,
+        "wires": [
+            [
+                "0cd3ed90f782b0b9",
+                "ce73362818683c25",
+                "104d9cd1b8f861c4",
+                "1549fe57aa1b7c97",
+                "4461e969a1a47dc6",
+                "b3d8f01f8611228f",
+                "c5a23911b8efe663"
+            ]
+        ]
+    },
+    {
+        "id": "0cd3ed90f782b0b9",
+        "type": "postgresql",
+        "z": "b35860787f2ba7f0",
+        "name": "PostgreSQL | TELEMETRY",
+        "query": "INSERT INTO sensor_measurements (device_id,niveau_percent,distance_cm,hauteur_cm,volume_liters,fill_time_estimated_s,puissance_pompe_percent,debit_cm_s,servo_angle_deg,vanne_ouverture_deg,measured_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,COALESCE($11::timestamptz,CURRENT_TIMESTAMP));",
+        "postgreSQLConfig": "c20e68d54afc0cd3",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 680,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce73362818683c25",
+        "type": "function",
+        "z": "b35860787f2ba7f0",
+        "name": "Préparer InfluxDB",
+        "func": "const d = msg.dashboardData;\n\nmsg.payload = [\n    {\n        niveau: d.niveau,\n        distance: d.distance,\n        hauteur: d.hauteur,\n        volume_eau_actuelle: d.volume,\n        temps_remplissage_estime: d.temps,\n        puissance_pompe: d.puissance,\n        debit: d.debit,\n        servo_angle: d.servo,\n        vanne_ouverture: d.vanne\n    },\n    {\n        device: d.deviceId,\n        source: \"mqtt\"\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 100,
+        "wires": [
+            [
+                "03c5ace9bac8fedd"
+            ]
+        ]
+    },
+    {
+        "id": "03c5ace9bac8fedd",
+        "type": "influxdb out",
+        "z": "b35860787f2ba7f0",
+        "influxdb": "c4b02c47f5ca78e8",
+        "name": "InfluxDB | reservoir_data",
+        "measurement": "reservoir_data",
+        "precision": "ms",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "reservoir-org",
+        "bucket": "reservoir-bucket",
+        "x": 910,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "104d9cd1b8f861c4",
+        "type": "function",
+        "z": "b35860787f2ba7f0",
+        "name": "État Dashboard",
+        "func": "let s = flow.get(\"dashboardState\") || {\n    deviceId: \"esp32-01\",\n    timestamp: \"\",\n    niveau: 0,\n    distance: 0,\n    hauteur: 0,\n    volume: 0,\n    temps: 0,\n    pompe: false,\n    relais: false,\n    puissance: 0,\n    debit: 0,\n    servo: 0,\n    vanne: 0,\n    fuite: \"NON\",\n    systeme: \"NORMAL\",\n    alertMessage: \"Aucune alerte\",\n    alertTimestamp: \"\",\n    ackStatus: \"AUCUN\",\n    ackCommandId: \"-\",\n    ackMessage: \"Aucun acquittement reçu\",\n    ackTimestamp: \"\"\n};\n\nif (msg.dashboardType === \"telemetry\") {\n    Object.assign(s, msg.dashboardData);\n}\n\nif (msg.dashboardType === \"status\") {\n    Object.assign(s, msg.dashboardData);\n}\n\nif (msg.dashboardType === \"alert\") {\n    s.deviceId = msg.dashboardData.deviceId;\n    s.fuite = msg.dashboardData.status || \"ACTIVE\";\n    s.systeme = \"FUITE\";\n    s.alertMessage = msg.dashboardData.message || \"Alerte fuite\";\n    s.alertTimestamp = msg.dashboardData.timestamp || \"\";\n}\n\nif (msg.dashboardType === \"ack\") {\n    s.ackStatus = msg.dashboardData.status;\n    s.ackCommandId = msg.dashboardData.commandId;\n    s.ackMessage = msg.dashboardData.message;\n    s.ackTimestamp = msg.dashboardData.timestamp || \"\";\n}\n\nflow.set(\"dashboardState\", s);\nmsg.payload = s;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 150,
+        "wires": [
+            [
+                "c4f741fadb2ca8bc"
+            ]
+        ]
+    },
+    {
+        "id": "1549fe57aa1b7c97",
+        "type": "function",
+        "z": "b35860787f2ba7f0",
+        "name": "Chart | Niveau",
+        "func": "msg.payload = Number(msg.dashboardData.niveau ?? 0);\nmsg.topic = \"Niveau\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 300,
+        "wires": [
+            [
+                "2d8aebd80bd4ac0b"
+            ]
+        ]
+    },
+    {
+        "id": "4461e969a1a47dc6",
+        "type": "function",
+        "z": "b35860787f2ba7f0",
+        "name": "Chart | Distance",
+        "func": "msg.payload = Number(msg.dashboardData.distance ?? 0);\nmsg.topic = \"Distance\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 360,
+        "wires": [
+            [
+                "b84b0859f9e06e64"
+            ]
+        ]
+    },
+    {
+        "id": "b3d8f01f8611228f",
+        "type": "function",
+        "z": "b35860787f2ba7f0",
+        "name": "Chart | Puissance",
+        "func": "msg.payload = Number(msg.dashboardData.puissance ?? 0);\nmsg.topic = \"Puissance pompe\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 420,
+        "wires": [
+            [
+                "e268b6d7f9782bc1"
+            ]
+        ]
+    },
+    {
+        "id": "c5a23911b8efe663",
+        "type": "function",
+        "z": "b35860787f2ba7f0",
+        "name": "Chart | Débit",
+        "func": "msg.payload = Number(msg.dashboardData.debit ?? 0);\nmsg.topic = \"Débit\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 480,
+        "wires": [
+            [
+                "e0cb6f397745ba31"
+            ]
+        ]
+    },
+    {
+        "id": "2d8aebd80bd4ac0b",
+        "type": "ui_chart",
+        "z": "b35860787f2ba7f0",
+        "name": "Historique | Niveau",
+        "group": "1182c1faa2155e3c",
+        "order": 1,
+        "width": "12",
+        "height": "4",
+        "label": "Niveau (%)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "En attente des données...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1050,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b84b0859f9e06e64",
+        "type": "ui_chart",
+        "z": "b35860787f2ba7f0",
+        "name": "Historique | Distance",
+        "group": "1182c1faa2155e3c",
+        "order": 2,
+        "width": "12",
+        "height": "4",
+        "label": "Distance HC-SR04 (cm)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "En attente des données...",
+        "dot": false,
+        "ymin": "100",
+        "ymax": "400",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1050,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e268b6d7f9782bc1",
+        "type": "ui_chart",
+        "z": "b35860787f2ba7f0",
+        "name": "Historique | Puissance",
+        "group": "1182c1faa2155e3c",
+        "order": 3,
+        "width": "12",
+        "height": "4",
+        "label": "Puissance pompe (%)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "En attente des données...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1050,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e0cb6f397745ba31",
+        "type": "ui_chart",
+        "z": "b35860787f2ba7f0",
+        "name": "Historique | Débit",
+        "group": "1182c1faa2155e3c",
+        "order": 4,
+        "width": "12",
+        "height": "4",
+        "label": "Débit pompe (cm/s)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "En attente des données...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "25",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1050,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c74b13e2bad0373c",
+        "type": "mqtt in",
+        "z": "b35860787f2ba7f0",
+        "name": "MQTT | STATUS",
+        "topic": "iotcloud/2026/groupe_chafi/projet/device01/status",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "broker_hivemq",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "32f2bb50300335c0"
+            ]
+        ]
+    },
+    {
+        "id": "32f2bb50300335c0",
+        "type": "function",
+        "z": "b35860787f2ba7f0",
+        "name": "Parser STATUS",
+        "func": "let data;\ntry {\n    data = typeof msg.payload === \"string\" ? JSON.parse(msg.payload) : msg.payload;\n} catch(e) {\n    node.error(\"STATUS JSON invalide\", msg);\n    return null;\n}\n\nmsg.payload = data;\nmsg.dashboardType = \"status\";\nmsg.dashboardData = {\n    deviceId: data.deviceId || \"esp32-01\",\n    timestamp: data.timestamp || \"\",\n    pompe: String(data.pompe || \"OFF\").toUpperCase() === \"ON\",\n    relais: String(data.relais || \"OFF\").toUpperCase() === \"ON\",\n    fuite: data.fuite || \"NON\",\n    systeme: data.systeme || \"NORMAL\"\n};\n\nmsg.params = [\n    data.deviceId || null,\n    data.pompe || null,\n    data.relais || null,\n    data.fuite || null,\n    data.systeme || null,\n    data.timestamp || null\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "104d9cd1b8f861c4",
+                "d36b80a5bfe51386",
+                "08f972b77d5bab5b"
+            ]
+        ]
+    },
+    {
+        "id": "d36b80a5bfe51386",
+        "type": "postgresql",
+        "z": "b35860787f2ba7f0",
+        "name": "PostgreSQL | STATUS",
+        "query": "INSERT INTO device_states (device_id,pompe_state,relais_state,fuite_state,system_state,recorded_at) VALUES ($1,$2,$3,$4,$5,COALESCE($6::timestamptz,CURRENT_TIMESTAMP));",
+        "postgreSQLConfig": "c20e68d54afc0cd3",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 860,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c387665512b12aca",
+        "type": "mqtt in",
+        "z": "b35860787f2ba7f0",
+        "name": "MQTT | ALERT",
+        "topic": "iotcloud/2026/groupe_chafi/projet/device01/alert",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "broker_hivemq",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "a724ddb3ef9dfa20"
+            ]
+        ]
+    },
+    {
+        "id": "a724ddb3ef9dfa20",
+        "type": "function",
+        "z": "b35860787f2ba7f0",
+        "name": "Parser ALERT",
+        "func": "let data;\ntry {\n    data = typeof msg.payload === \"string\" ? JSON.parse(msg.payload) : msg.payload;\n} catch(e) {\n    node.error(\"ALERT JSON invalide\", msg);\n    return null;\n}\n\nconst m = data.measurements || {};\n\nmsg.payload = data;\nmsg.dashboardType = \"alert\";\nmsg.dashboardData = {\n    deviceId: data.deviceId || \"esp32-01\",\n    timestamp: data.timestamp || \"\",\n    status: data.status || \"ACTIVE\",\n    message: data.message || \"Alerte\",\n    niveau: Number(m.niveau ?? 0),\n    distance: Number(m.distance ?? 0)\n};\n\nmsg.params = [\n    data.deviceId || null,\n    data.type || \"FUITE\",\n    data.status || \"ACTIVE\",\n    m.niveau ?? null,\n    m.distance ?? null,\n    data.message || null\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 240,
+        "wires": [
+            [
+                "f2a57d690ba233e8",
+                "104d9cd1b8f861c4"
+            ]
+        ]
+    },
+    {
+        "id": "f2a57d690ba233e8",
+        "type": "postgresql",
+        "z": "b35860787f2ba7f0",
+        "name": "PostgreSQL | ALERT",
+        "query": "INSERT INTO alerts (device_id,alert_type,status,level_percent,distance_cm,message) VALUES ($1,$2,$3,$4,$5,$6);",
+        "postgreSQLConfig": "c20e68d54afc0cd3",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1020,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d03e24f26cef59a1",
+        "type": "mqtt in",
+        "z": "b35860787f2ba7f0",
+        "name": "MQTT | ACK",
+        "topic": "iotcloud/2026/groupe_chafi/projet/device01/ack",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "broker_hivemq",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 300,
+        "wires": [
+            [
+                "ef06889068635c31"
+            ]
+        ]
+    },
+    {
+        "id": "ef06889068635c31",
+        "type": "function",
+        "z": "b35860787f2ba7f0",
+        "name": "Parser ACK",
+        "func": "let data;\ntry {\n    data = typeof msg.payload === \"string\" ? JSON.parse(msg.payload) : msg.payload;\n} catch(e) {\n    node.error(\"ACK JSON invalide\", msg);\n    return null;\n}\n\nif (!data.commandId) {\n    node.error(\"ACK sans commandId\", msg);\n    return null;\n}\n\nmsg.payload = data;\nmsg.dashboardType = \"ack\";\nmsg.dashboardData = {\n    commandId: data.commandId,\n    deviceId: data.deviceId || \"esp32-01\",\n    status: data.status || \"UNKNOWN\",\n    message: data.message || \"\",\n    timestamp: data.timestamp || \"\"\n};\n\nmsg.params = [\n    data.commandId,\n    data.deviceId || null,\n    data.status || null,\n    data.message || null,\n    data.timestamp || null\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 300,
+        "wires": [
+            [
+                "718969e8ece1cb5f",
+                "104d9cd1b8f861c4"
+            ]
+        ]
+    },
+    {
+        "id": "718969e8ece1cb5f",
+        "type": "postgresql",
+        "z": "b35860787f2ba7f0",
+        "name": "PostgreSQL | ACK",
+        "query": "INSERT INTO command_acks (command_id,device_id,status,message,acknowledged_at) VALUES ($1,$2,$3,$4,COALESCE($5::timestamptz,CURRENT_TIMESTAMP));",
+        "postgreSQLConfig": "c20e68d54afc0cd3",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1010,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c4f741fadb2ca8bc",
+        "type": "ui_template",
+        "z": "b35860787f2ba7f0",
+        "group": "e2910e34987a36d3",
+        "name": "Dashboard principal",
+        "order": 1,
+        "width": "12",
+        "height": "11",
+        "format": "<style>\n.r{font-family:Arial,sans-serif;color:#172033}.head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.title{font-size:26px;font-weight:700}.sub{font-size:12px;color:#6b778c}.pill{padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700}.ok{background:#dcfce7;color:#166534}.danger{background:#fee2e2;color:#991b1b}.warn{background:#fef3c7;color:#92400e}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{background:#fff;border:1px solid #e6ebf1;border-radius:16px;padding:16px;box-shadow:0 4px 16px rgba(0,0,0,.05)}.wide{grid-column:span 2}.lab{font-size:11px;color:#748094;text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px}.val{font-size:26px;font-weight:750}.unit{font-size:12px;color:#748094}.muted{font-size:12px;color:#778398;margin-top:6px}.bar{height:10px;background:#e9eef4;border-radius:999px;overflow:hidden;margin-top:12px}.fill{height:100%;background:#2563eb;border-radius:999px}.status{font-size:19px;font-weight:750}.dangerText{color:#991b1b}.ack{font-size:12px;line-height:1.55}@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.grid{grid-template-columns:1fr}.wide{grid-column:span 1}}</style>\n<div class=\"r\" ng-if=\"msg.payload\">\n<div class=\"head\"><div><div class=\"title\">Réservoir Intelligent</div><div class=\"sub\">Device : {{msg.payload.deviceId}} · Dernière mesure : {{msg.payload.timestamp}}</div></div><div class=\"pill\" ng-class=\"{'danger':msg.payload.fuite==='ACTIVE','warn':msg.payload.systeme==='FUITE','ok':msg.payload.fuite!=='ACTIVE'&&msg.payload.systeme!=='FUITE'}\">{{msg.payload.fuite==='ACTIVE'?'FUITE ACTIVE':msg.payload.systeme}}</div></div>\n<div class=\"grid\">\n<div class=\"card wide\"><div class=\"lab\">Niveau</div><div class=\"val\">{{msg.payload.niveau|number:0}} <span class=\"unit\">%</span></div><div class=\"bar\"><div class=\"fill\" ng-style=\"{'width':(msg.payload.niveau||0)+'%'}\"></div></div><div class=\"muted\">Volume : {{msg.payload.volume|number:0}} L / 1000 L</div></div>\n<div class=\"card\"><div class=\"lab\">Distance</div><div class=\"val\">{{msg.payload.distance|number:1}} <span class=\"unit\">cm</span></div></div>\n<div class=\"card\"><div class=\"lab\">Hauteur d'eau</div><div class=\"val\">{{msg.payload.hauteur|number:1}} <span class=\"unit\">cm</span></div></div>\n<div class=\"card\"><div class=\"lab\">Temps estimé</div><div class=\"val\">{{msg.payload.temps|number:1}} <span class=\"unit\">s</span></div><div class=\"muted\">selon le débit actuel</div></div>\n<div class=\"card wide\"><div class=\"lab\">Pompe</div><div class=\"status\">{{msg.payload.pompe?'EN MARCHE':'ARRÊTÉE'}}</div><div class=\"muted\">Puissance {{msg.payload.puissance|number:0}} % · Débit {{msg.payload.debit|number:2}} cm/s</div></div>\n<div class=\"card\"><div class=\"lab\">Relais</div><div class=\"status\">{{msg.payload.relais?'ON':'OFF'}}</div></div>\n<div class=\"card\"><div class=\"lab\">Servo / Vanne</div><div class=\"val\">{{msg.payload.servo|number:0}}°</div><div class=\"muted\">Ouverture : {{msg.payload.vanne|number:1}}°</div></div>\n<div class=\"card wide\"><div class=\"lab\">Sécurité</div><div class=\"status\" ng-class=\"{'dangerText':msg.payload.fuite==='ACTIVE'}\">{{msg.payload.fuite==='ACTIVE'?'🚨 FUITE ACTIVE':'✓ Aucune fuite'}}</div><div class=\"muted\">Simulation / reset : bouton physique GPIO 17 ou reset depuis le Dashboard</div></div>\n<div class=\"card wide\"><div class=\"lab\">Dernier ACK</div><div class=\"ack\"><b>{{msg.payload.ackStatus}}</b> · {{msg.payload.ackCommandId}}<br>{{msg.payload.ackMessage}}<br><span class=\"muted\">{{msg.payload.ackTimestamp}}</span></div></div>\n<div class=\"card wide\"><div class=\"lab\">Dernière alerte</div><div class=\"ack\">{{msg.payload.alertMessage}}<br><span class=\"muted\">{{msg.payload.alertTimestamp}}</span></div></div>\n</div></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 980,
+        "y": 150,
+        "wires": [
+            [
+                "7564dc43def775c7"
+            ]
+        ]
+    },
+    {
+        "id": "d89b22a4ef6dfc9d",
+        "type": "ui_button",
+        "z": "b35860787f2ba7f0",
+        "name": "Pompe ON",
+        "group": "832c282730dcac3b",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "▶ Démarrer pompe",
+        "tooltip": "PUMP_ON",
+        "color": "",
+        "bgcolor": "#2e7d32",
+        "className": "",
+        "icon": "fa-play",
+        "payload": "PUMP_ON",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 120,
+        "y": 560,
+        "wires": [
+            [
+                "57065bdeb22ae13d"
+            ]
+        ]
+    },
+    {
+        "id": "e94f64cec0f0b09e",
+        "type": "ui_button",
+        "z": "b35860787f2ba7f0",
+        "name": "Pompe OFF",
+        "group": "832c282730dcac3b",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "■ Arrêter pompe",
+        "tooltip": "PUMP_OFF",
+        "color": "",
+        "bgcolor": "#c62828",
+        "className": "",
+        "icon": "fa-stop",
+        "payload": "PUMP_OFF",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 120,
+        "y": 610,
+        "wires": [
+            [
+                "57065bdeb22ae13d"
+            ]
+        ]
+    },
+    {
+        "id": "ac8a2a4ba290d714",
+        "type": "ui_dropdown",
+        "z": "b35860787f2ba7f0",
+        "name": "Débit pompe",
+        "label": "Débit pompe",
+        "tooltip": "Choisir le débit",
+        "place": "Sélectionner",
+        "group": "832c282730dcac3b",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "5 cm/s",
+                "value": 5,
+                "type": "num"
+            },
+            {
+                "label": "10 cm/s",
+                "value": 10,
+                "type": "num"
+            },
+            {
+                "label": "15 cm/s",
+                "value": 15,
+                "type": "num"
+            },
+            {
+                "label": "20 cm/s",
+                "value": 20,
+                "type": "num"
+            },
+            {
+                "label": "25 cm/s",
+                "value": 25,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 120,
+        "y": 660,
+        "wires": [
+            [
+                "57065bdeb22ae13d"
+            ]
+        ]
+    },
+    {
+        "id": "992ed18c075492e6",
+        "type": "ui_button",
+        "z": "b35860787f2ba7f0",
+        "name": "Reset fuite Dashboard",
+        "group": "832c282730dcac3b",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "↻ Reset fuite",
+        "tooltip": "RESET_FUITE",
+        "color": "",
+        "bgcolor": "#1565c0",
+        "className": "",
+        "icon": "fa-refresh",
+        "payload": "RESET_FUITE",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 130,
+        "y": 710,
+        "wires": [
+            [
+                "57065bdeb22ae13d"
+            ]
+        ]
+    },
+    {
+        "id": "57065bdeb22ae13d",
+        "type": "function",
+        "z": "b35860787f2ba7f0",
+        "name": "Préparer commande MQTT",
+        "func": "let v = msg.payload;\nlet command;\nlet value = null;\n\nif (v === \"PUMP_ON\") {\n    command = \"PUMP_ON\";\n} else if (v === \"PUMP_OFF\") {\n    command = \"PUMP_OFF\";\n} else if (v === \"RESET_FUITE\") {\n    command = \"RESET_FUITE\";\n} else {\n    value = Number(v);\n    if (![5,10,15,20,25].includes(value)) {\n        node.error(\"Débit non autorisé\", msg);\n        return null;\n    }\n    command = \"SET_DEBIT\";\n}\n\nconst commandId = \"cmd-nodered-\" + Date.now();\nconst topic = \"iotcloud/2026/groupe_chafi/projet/device01/command\";\n\nconst payload = {\n    commandId: commandId,\n    deviceId: \"esp32-01\",\n    command: command\n};\n\nif (value !== null) {\n    payload.value = value;\n}\n\nconst mqttMsg = {\n    topic: topic,\n    payload: JSON.stringify(payload)\n};\n\nconst dbMsg = {\n    topic: topic,\n    params: [\n        commandId,\n        \"esp32-01\",\n        command,\n        value === null ? null : String(value),\n        topic,\n        \"node-red\"\n    ],\n    payload: payload\n};\n\nnode.warn(\"====================================\");\nnode.warn(\"COMMANDE : \" + command);\nnode.warn(\"COMMAND ID : \" + commandId);\nif (value !== null) {\n    node.warn(\"VALEUR : \" + value);\n}\nnode.warn(\"TOPIC : \" + topic);\nnode.warn(\"====================================\");\n\nreturn [dbMsg, mqttMsg];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 610,
+        "wires": [
+            [
+                "70bca3502ff5b6ee"
+            ],
+            [
+                "2a4def15575f8af8"
+            ]
+        ]
+    },
+    {
+        "id": "70bca3502ff5b6ee",
+        "type": "postgresql",
+        "z": "b35860787f2ba7f0",
+        "name": "PostgreSQL | COMMAND",
+        "query": "INSERT INTO commands (command_id,device_id,command_type,command_value,topic,source) VALUES ($1,$2,$3,$4,$5,$6);",
+        "postgreSQLConfig": "c20e68d54afc0cd3",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 690,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2a4def15575f8af8",
+        "type": "mqtt out",
+        "z": "b35860787f2ba7f0",
+        "name": "MQTT → ESP32 | COMMAND",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "broker_hivemq",
+        "x": 700,
+        "y": 650,
+        "wires": []
+    },
+    {
+        "id": "7564dc43def775c7",
+        "type": "websocket out",
+        "z": "b35860787f2ba7f0",
+        "name": "WebSocket → Frontend | RESERVOIR",
+        "server": "8b7f91412b024a83",
+        "client": "",
+        "x": 1310,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "109b270bd42d0f5c",
+        "type": "inject",
+        "z": "b35860787f2ba7f0",
+        "name": "Init seuil rouge = 20",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 320,
+        "y": 1180,
+        "wires": [
+            [
+                "b9b64416100a984d"
+            ]
+        ]
+    },
+    {
+        "id": "c33dba0559e2a51f",
+        "type": "inject",
+        "z": "b35860787f2ba7f0",
+        "name": "Init seuil vert = 60",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "60",
+        "payloadType": "num",
+        "x": 320,
+        "y": 1240,
+        "wires": [
+            [
+                "ae0d2d838975e1f9"
+            ]
+        ]
+    },
+    {
+        "id": "b9b64416100a984d",
+        "type": "ui_numeric",
+        "z": "b35860787f2ba7f0",
+        "name": "Seuil rouge",
+        "label": "🔴 Rouge si niveau <",
+        "tooltip": "Orange entre les deux seuils",
+        "group": "5a1c9e0b7d3f2a41",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "wrap": false,
+        "passthru": false,
+        "topic": "seuilBas",
+        "topicType": "str",
+        "format": "{{value}} %",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "className": "",
+        "x": 540,
+        "y": 1180,
+        "wires": [
+            [
+                "1647b30a5bc2d5d2"
+            ]
+        ]
+    },
+    {
+        "id": "ae0d2d838975e1f9",
+        "type": "ui_numeric",
+        "z": "b35860787f2ba7f0",
+        "name": "Seuil vert",
+        "label": "🟢 Vert si niveau >",
+        "tooltip": "Orange entre les deux seuils",
+        "group": "5a1c9e0b7d3f2a41",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "wrap": false,
+        "passthru": false,
+        "topic": "seuilHaut",
+        "topicType": "str",
+        "format": "{{value}} %",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "className": "",
+        "x": 540,
+        "y": 1240,
+        "wires": [
+            [
+                "1647b30a5bc2d5d2"
+            ]
+        ]
+    },
+    {
+        "id": "1647b30a5bc2d5d2",
+        "type": "function",
+        "z": "b35860787f2ba7f0",
+        "name": "Mémoriser seuils LED",
+        "func": "const v = Number(msg.payload);\nif (msg.payload === null || msg.payload === \"\" || !isFinite(v)) return null;\nif (msg.topic === \"seuilBas\") flow.set(\"seuilBas\", v);\nif (msg.topic === \"seuilHaut\") flow.set(\"seuilHaut\", v);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1210,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c6388bf8b78eb628",
+        "type": "ui_button",
+        "z": "b35860787f2ba7f0",
+        "name": "Appliquer seuils",
+        "group": "5a1c9e0b7d3f2a41",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "label": "✔ Appliquer les seuils",
+        "tooltip": "SET_SEUILS",
+        "color": "",
+        "bgcolor": "#2e7d32",
+        "className": "",
+        "icon": "",
+        "payload": "SET_SEUILS",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 320,
+        "y": 1320,
+        "wires": [
+            [
+                "8a9a5857aff35a06"
+            ]
+        ]
+    },
+    {
+        "id": "dc2380584f4a966d",
+        "type": "ui_button",
+        "z": "b35860787f2ba7f0",
+        "name": "Seuils par défaut",
+        "group": "5a1c9e0b7d3f2a41",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "label": "↺ Par défaut (20 / 60)",
+        "tooltip": "RESET_SEUILS",
+        "color": "",
+        "bgcolor": "#1565c0",
+        "className": "",
+        "icon": "",
+        "payload": "RESET_SEUILS",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 320,
+        "y": 1380,
+        "wires": [
+            [
+                "8a9a5857aff35a06"
+            ]
+        ]
+    },
+    {
+        "id": "8a9a5857aff35a06",
+        "type": "function",
+        "z": "b35860787f2ba7f0",
+        "name": "Préparer commande SEUILS",
+        "func": "const command = String(msg.payload);\nconst DEF_BAS = 20;\nconst DEF_HAUT = 60;\nlet bas = null;\nlet haut = null;\n\nif (command === \"SET_SEUILS\") {\n    bas = Number(flow.get(\"seuilBas\") ?? DEF_BAS);\n    haut = Number(flow.get(\"seuilHaut\") ?? DEF_HAUT);\n    if (!isFinite(bas) || !isFinite(haut)) {\n        node.error(\"Seuils invalides\", msg);\n        return null;\n    }\n} else if (command === \"RESET_SEUILS\") {\n    flow.set(\"seuilBas\", DEF_BAS);\n    flow.set(\"seuilHaut\", DEF_HAUT);\n} else {\n    node.error(\"Commande seuils inconnue\", msg);\n    return null;\n}\n\nconst commandId = \"cmd-nodered-\" + Date.now();\nconst topic = \"iotcloud/2026/groupe_chafi/projet/device01/command\";\n\nconst payload = {\n    commandId: commandId,\n    deviceId: \"esp32-01\",\n    command: command\n};\n\nif (command === \"SET_SEUILS\") {\n    payload.seuilBas = bas;\n    payload.seuilHaut = haut;\n}\n\nconst mqttMsg = {\n    topic: topic,\n    payload: JSON.stringify(payload)\n};\n\nconst dbMsg = {\n    topic: topic,\n    params: [\n        commandId,\n        \"esp32-01\",\n        command,\n        command === \"SET_SEUILS\" ? (bas + \"-\" + haut) : null,\n        topic,\n        \"node-red\"\n    ],\n    payload: payload\n};\n\nnode.warn(\"COMMANDE : \" + command + \" | ID : \" + commandId);\n\n// Après RESET : remettre les champs du dashboard à 20 / 60\nconst uiBas = command === \"RESET_SEUILS\" ? { payload: DEF_BAS } : null;\nconst uiHaut = command === \"RESET_SEUILS\" ? { payload: DEF_HAUT } : null;\n\nreturn [dbMsg, mqttMsg, uiBas, uiHaut];",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 1350,
+        "wires": [
+            [
+                "36f2cf8173c416d0"
+            ],
+            [
+                "d92ba0fa36ffb40f"
+            ],
+            [
+                "b9b64416100a984d"
+            ],
+            [
+                "ae0d2d838975e1f9"
+            ]
+        ]
+    },
+    {
+        "id": "36f2cf8173c416d0",
+        "type": "postgresql",
+        "z": "b35860787f2ba7f0",
+        "name": "PostgreSQL | COMMAND (seuils)",
+        "query": "INSERT INTO commands (command_id,device_id,command_type,command_value,topic,source) VALUES ($1,$2,$3,$4,$5,$6);",
+        "postgreSQLConfig": "c20e68d54afc0cd3",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 900,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d92ba0fa36ffb40f",
+        "type": "mqtt out",
+        "z": "b35860787f2ba7f0",
+        "name": "MQTT → ESP32 | COMMAND (seuils)",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "broker_hivemq",
+        "x": 910,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "3f52e319f174ac12",
+        "type": "inject",
+        "z": "b35860787f2ba7f0",
+        "name": "Rafraîchir tables (5 s)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 1540,
+        "wires": [
+            [
+                "c6d528070df9e554",
+                "e31eba2f43c13d2e",
+                "1e9d0f65d5d0254e",
+                "f2bcc65adca1499b",
+                "0e0ab280741d683e"
+            ]
+        ]
+    },
+    {
+        "id": "c6d528070df9e554",
+        "type": "postgresql",
+        "z": "b35860787f2ba7f0",
+        "name": "PostgreSQL | Lire sensor_measurements",
+        "query": "SELECT to_char(measured_at,'DD/MM HH24:MI:SS') AS \"Date\", ROUND(niveau_percent::numeric,1) AS \"Niveau %\", ROUND(distance_cm::numeric,1) AS \"Distance cm\", ROUND(hauteur_cm::numeric,1) AS \"Hauteur cm\", ROUND(volume_liters::numeric,0) AS \"Volume L\", ROUND(puissance_pompe_percent::numeric,0) AS \"Puissance %\", ROUND(debit_cm_s::numeric,1) AS \"Débit cm/s\", ROUND(servo_angle_deg::numeric,0) AS \"Servo °\", ROUND(vanne_ouverture_deg::numeric,0) AS \"Vanne °\" FROM sensor_measurements ORDER BY measured_at DESC LIMIT 15;",
+        "postgreSQLConfig": "c20e68d54afc0cd3",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 620,
+        "y": 1480,
+        "wires": [
+            [
+                "b66c7362a396dcae"
+            ]
+        ]
+    },
+    {
+        "id": "b66c7362a396dcae",
+        "type": "ui_template",
+        "z": "b35860787f2ba7f0",
+        "group": "hist_grp_tables",
+        "name": "Table | Mesures capteurs",
+        "order": 1,
+        "width": "12",
+        "height": "8",
+        "format": "<style>.pgw{max-height:300px;overflow:auto}.pgt{width:100%;border-collapse:collapse;font-size:12px}.pgt th{background:#f1f5f9;text-align:left;padding:6px 8px;position:sticky;top:0;color:#172033}.pgt td{padding:5px 8px;border-top:1px solid #e6ebf1;white-space:nowrap;color:#172033}.pgh{font-size:15px;font-weight:700;margin-bottom:6px;color:#172033}.pgh span{font-weight:400;font-size:12px;color:#748094}</style>\n<div class=\"pgh\">Mesures capteurs <span>(15 dernières lignes)</span></div>\n<div class=\"pgw\"><table class=\"pgt\" ng-if=\"msg.payload.length\"><thead><tr><th ng-repeat=\"(k,v) in msg.payload[0]\">{{k}}</th></tr></thead><tbody><tr ng-repeat=\"row in msg.payload track by $index\"><td ng-repeat=\"(k,v) in row\">{{v}}</td></tr></tbody></table><div ng-if=\"!msg.payload.length\" style=\"font-size:12px;color:#748094\">Aucune donnée</div></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 940,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e31eba2f43c13d2e",
+        "type": "postgresql",
+        "z": "b35860787f2ba7f0",
+        "name": "PostgreSQL | Lire device_states",
+        "query": "SELECT to_char(recorded_at,'DD/MM HH24:MI:SS') AS \"Date\", pompe_state AS \"Pompe\", relais_state AS \"Relais\", fuite_state AS \"Fuite\", system_state AS \"Système\" FROM device_states ORDER BY recorded_at DESC LIMIT 15;",
+        "postgreSQLConfig": "c20e68d54afc0cd3",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 620,
+        "y": 1540,
+        "wires": [
+            [
+                "c05dcf1e1a05b74b"
+            ]
+        ]
+    },
+    {
+        "id": "c05dcf1e1a05b74b",
+        "type": "ui_template",
+        "z": "b35860787f2ba7f0",
+        "group": "hist_grp_tables",
+        "name": "Table | États du système",
+        "order": 2,
+        "width": "12",
+        "height": "8",
+        "format": "<div class=\"pgh\">États du système <span>(15 dernières lignes)</span></div>\n<div class=\"pgw\"><table class=\"pgt\" ng-if=\"msg.payload.length\"><thead><tr><th ng-repeat=\"(k,v) in msg.payload[0]\">{{k}}</th></tr></thead><tbody><tr ng-repeat=\"row in msg.payload track by $index\"><td ng-repeat=\"(k,v) in row\">{{v}}</td></tr></tbody></table><div ng-if=\"!msg.payload.length\" style=\"font-size:12px;color:#748094\">Aucune donnée</div></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 940,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1e9d0f65d5d0254e",
+        "type": "postgresql",
+        "z": "b35860787f2ba7f0",
+        "name": "PostgreSQL | Lire alerts",
+        "query": "SELECT * FROM alerts ORDER BY 1 DESC LIMIT 15;",
+        "postgreSQLConfig": "c20e68d54afc0cd3",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 620,
+        "y": 1600,
+        "wires": [
+            [
+                "8ea39de4cf70460b"
+            ]
+        ]
+    },
+    {
+        "id": "8ea39de4cf70460b",
+        "type": "ui_template",
+        "z": "b35860787f2ba7f0",
+        "group": "hist_grp_tables",
+        "name": "Table | Alertes",
+        "order": 3,
+        "width": "12",
+        "height": "8",
+        "format": "<div class=\"pgh\">Alertes <span>(15 dernières lignes)</span></div>\n<div class=\"pgw\"><table class=\"pgt\" ng-if=\"msg.payload.length\"><thead><tr><th ng-repeat=\"(k,v) in msg.payload[0]\">{{k}}</th></tr></thead><tbody><tr ng-repeat=\"row in msg.payload track by $index\"><td ng-repeat=\"(k,v) in row\">{{v}}</td></tr></tbody></table><div ng-if=\"!msg.payload.length\" style=\"font-size:12px;color:#748094\">Aucune donnée</div></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 940,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f2bcc65adca1499b",
+        "type": "postgresql",
+        "z": "b35860787f2ba7f0",
+        "name": "PostgreSQL | Lire commands",
+        "query": "SELECT * FROM commands ORDER BY 1 DESC LIMIT 15;",
+        "postgreSQLConfig": "c20e68d54afc0cd3",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 620,
+        "y": 1660,
+        "wires": [
+            [
+                "19921709acfcbc19"
+            ]
+        ]
+    },
+    {
+        "id": "19921709acfcbc19",
+        "type": "ui_template",
+        "z": "b35860787f2ba7f0",
+        "group": "hist_grp_tables",
+        "name": "Table | Commandes envoyées",
+        "order": 4,
+        "width": "12",
+        "height": "8",
+        "format": "<div class=\"pgh\">Commandes envoyées <span>(15 dernières lignes)</span></div>\n<div class=\"pgw\"><table class=\"pgt\" ng-if=\"msg.payload.length\"><thead><tr><th ng-repeat=\"(k,v) in msg.payload[0]\">{{k}}</th></tr></thead><tbody><tr ng-repeat=\"row in msg.payload track by $index\"><td ng-repeat=\"(k,v) in row\">{{v}}</td></tr></tbody></table><div ng-if=\"!msg.payload.length\" style=\"font-size:12px;color:#748094\">Aucune donnée</div></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 940,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e0ab280741d683e",
+        "type": "postgresql",
+        "z": "b35860787f2ba7f0",
+        "name": "PostgreSQL | Lire command_acks",
+        "query": "SELECT to_char(acknowledged_at,'DD/MM HH24:MI:SS') AS \"Date\", command_id AS \"Commande\", status AS \"Statut\", message AS \"Message\" FROM command_acks ORDER BY acknowledged_at DESC LIMIT 15;",
+        "postgreSQLConfig": "c20e68d54afc0cd3",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 620,
+        "y": 1720,
+        "wires": [
+            [
+                "fcb4895bee38f9eb"
+            ]
+        ]
+    },
+    {
+        "id": "fcb4895bee38f9eb",
+        "type": "ui_template",
+        "z": "b35860787f2ba7f0",
+        "group": "hist_grp_tables",
+        "name": "Table | Acquittements (ACK)",
+        "order": 5,
+        "width": "12",
+        "height": "8",
+        "format": "<div class=\"pgh\">Acquittements (ACK) <span>(15 dernières lignes)</span></div>\n<div class=\"pgw\"><table class=\"pgt\" ng-if=\"msg.payload.length\"><thead><tr><th ng-repeat=\"(k,v) in msg.payload[0]\">{{k}}</th></tr></thead><tbody><tr ng-repeat=\"row in msg.payload track by $index\"><td ng-repeat=\"(k,v) in row\">{{v}}</td></tr></tbody></table><div ng-if=\"!msg.payload.length\" style=\"font-size:12px;color:#748094\">Aucune donnée</div></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 940,
+        "y": 1720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "11e52079c9c127d6",
+        "type": "ui_numeric",
+        "z": "b35860787f2ba7f0",
+        "name": "",
+        "label": "Hauteur initiale HC",
+        "tooltip": "Entrer la valeur initiale de HC",
+        "group": "966d5ae170a4c154",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "wrap": true,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}cm",
+        "min": 0,
+        "max": "500",
+        "step": 1,
+        "className": "",
+        "x": 130,
+        "y": 500,
+        "wires": [
+            [
+                "9f8fa8df660e5fe0"
+            ]
+        ]
+    },
+    {
+        "id": "9f8fa8df660e5fe0",
+        "type": "function",
+        "z": "b35860787f2ba7f0",
+        "name": "preparer commande hc init",
+        "func": "const value = Number(msg.payload);\n\nif (!isFinite(value) || value < 0 || value > 400) {\n    node.error(\"Valeur HC invalide : \" + msg.payload, msg);\n    return null;\n}\n\nconst commandId = \"cmd-nodered-\" + Date.now();\nconst topic = \"iotcloud/2026/groupe_chafi/projet/device01/command\";\n\nconst payload = {\n    commandId: commandId,\n    deviceId: \"esp32-01\",\n    command: \"SET_HC_INITIAL\",\n    value: value\n};\n\nconst mqttMsg = {\n    topic: topic,\n    payload: JSON.stringify(payload)\n};\n\nconst dbMsg = {\n    topic: topic,\n    params: [\n        commandId,\n        \"esp32-01\",\n        \"SET_HC_INITIAL\",\n        String(value),\n        topic,\n        \"node-red\"\n    ],\n    payload: payload\n};\n\nnode.warn(\"====================================\");\nnode.warn(\"COMMANDE : SET_HC_INITIAL\");\nnode.warn(\"COMMAND ID : \" + commandId);\nnode.warn(\"VALEUR HC : \" + value + \" cm\");\nnode.warn(\"TOPIC : \" + topic);\nnode.warn(\"====================================\");\n\nreturn [dbMsg, mqttMsg];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 520,
+        "wires": [
+            [
+                "70bca3502ff5b6ee"
+            ],
+            [
+                "2a4def15575f8af8"
+            ]
+        ]
+    },
+    {
+        "id": "08f972b77d5bab5b",
+        "type": "function",
+        "z": "b35860787f2ba7f0",
+        "name": "Préparer InfluxDB | STATUS",
+        "func": "const d = msg.dashboardData;\n\nlet fuite_num = 0;\nlet systeme_num = 0;\n\nif (String(d.fuite).toUpperCase() === \"ACTIVE\") {\n    fuite_num = 1;\n}\n\nconst etat = String(d.systeme).toUpperCase();\n\nif (etat === \"FUITE\") {\n    systeme_num = 2;\n} else if (etat === \"NIVEAU BAS\") {\n    systeme_num = 1;\n} else {\n    systeme_num = 0;\n}\n\nmsg.payload = [\n    {\n        fuite_num: fuite_num,\n        systeme_num: systeme_num\n    },\n    {\n        device: d.deviceId,\n        source: \"mqtt_status\"\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 220,
+        "wires": [
+            [
+                "22fab3dd888c94ad"
+            ]
+        ]
+    },
+    {
+        "id": "22fab3dd888c94ad",
+        "type": "influxdb out",
+        "z": "b35860787f2ba7f0",
+        "influxdb": "c4b02c47f5ca78e8",
+        "name": "InfluxDB | reservoir_data",
+        "measurement": "reservoir_data",
+        "precision": "ms",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "reservoir-org",
+        "bucket": "reservoir-bucket",
+        "x": 930,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0e9c137065073bfb",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-contrib-influxdb": "0.7.0",
+            "node-red-contrib-postgresql": "0.16.2"
+        }
+    }
+]

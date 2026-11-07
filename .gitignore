@@ -1,0 +1,11 @@
+.platformio-venv/
+wokwi/.pio/
+
+.env
+node_modules/
+dist/
+.pio/
+*.log
+src/IOTDOCKER.rar
+imported/
+offline-deps/

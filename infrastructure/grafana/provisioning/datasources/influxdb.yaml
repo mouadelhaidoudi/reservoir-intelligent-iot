@@ -1,0 +1,16 @@
+apiVersion: 1
+
+datasources:
+  - name: InfluxDB Reservoir
+    uid: reservoir-influxdb
+    type: influxdb
+    access: proxy
+    url: http://influxdb:8086
+    isDefault: true
+    jsonData:
+      version: Flux
+      organization: reservoir-org
+      defaultBucket: reservoir-bucket
+      tlsSkipVerify: true
+    secureJsonData:
+      token: reservoir-super-secret-token-123

@@ -1,0 +1,10 @@
+{
+  "name": "node-red-contrib-local-postgresql",
+  "version": "1.0.0",
+  "private": true,
+  "node-red": {
+    "nodes": {
+      "postgresql": "postgresql.js"
+    }
+  }
+}
